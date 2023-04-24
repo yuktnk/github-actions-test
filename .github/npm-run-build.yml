@@ -11,4 +11,6 @@ jobs:
       - name: npm-run-build
         run: |
           echo Hello, world!
+          node -v
+          npm install
           npm run build
