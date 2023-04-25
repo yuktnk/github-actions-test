@@ -27,9 +27,8 @@ jobs:
           npm ci
           echo ===== npm run build =====
           npm run build
-          - name: Commit and Push
 
-      - name: git commit + git push
+      - name: Commit and Push
         run: |
           git add -N .
           if ! git diff --exit-code --quiet
