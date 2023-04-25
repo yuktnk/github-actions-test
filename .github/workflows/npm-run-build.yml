@@ -8,6 +8,17 @@ on:
 
 jobs:
   build:
+    permissions:
+      actions: write
+      checks: write
+      contents: write
+      deployments: write
+      issues: write
+      packages: write
+      pull-requests: write
+      repository-projects: write
+      security-events: write
+      statuses: write
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -33,10 +44,8 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git config user.name "your name"
-            git config user.email "your mailaddress@yourma.com"
             git add .
-            git commit -m "commit message"
+            git commit -m "update build - automated commit by GitHub Actions"
             git pull
             git push origin master
           fi
