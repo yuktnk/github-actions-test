@@ -21,6 +21,9 @@ jobs:
 
       - name: install and build
         run: |
+          echo ===== Node.jsバージョン確認 =====
           node -v
+          echo ===== npm install =====
           npm install
+          echo ===== npm run build =====
           npm run build
