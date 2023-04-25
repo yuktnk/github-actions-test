@@ -45,6 +45,8 @@ jobs:
           if ! git diff --exit-code --quiet
           then
             git add .
+            git config --global user.email "you@example.com"
+            git config --global user.name "Your Name"
             git commit -m "update build - automated commit by GitHub Actions"
             git pull
             git push origin master
