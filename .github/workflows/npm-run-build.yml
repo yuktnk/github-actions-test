@@ -23,7 +23,7 @@ jobs:
         run: |
           echo ===== Node.jsバージョン確認 =====
           node -v
-          echo ===== npm install =====
-          npm install
+          echo ===== Install dependencies =====
+          npm ci
           echo ===== npm run build =====
           npm run build
